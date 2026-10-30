@@ -1,4 +1,5 @@
 let formulario = document.getElementById('formTaller2');
+let resultado = document.getElementById('resultado');
 
 formulario.addEventListener('submit', function (event){
  event.preventDefault();
@@ -13,7 +14,7 @@ formulario.addEventListener('submit', function (event){
   return;
  }
  let desempeno;
- let resultado = 'aprovado';
+ let estado = 'Aprobado';
  if(nota >= 4.5) {
   desempeno = 'Excelente';
 } else if(nota >= 4.0) {
@@ -22,7 +23,7 @@ formulario.addEventListener('submit', function (event){
   desempeno = 'Aceptable'
 } else {
   desempeno = 'Insuficiente';
-  resultado = 'No aprovado';
+  estado = 'No aprobado';
 }
-document.getElementById('resultado').innerText = `Tu nota es ${nota} - ${desempeno}: ${resultado}`;
+resultado.innerText = `Tu nota es ${nota} - ${desempeno}: ${estado}`;
 })

@@ -12,8 +12,9 @@ formulario.addEventListener('submit', function (event){
     resultado.innerText = 'Por favor complete los números.';
     return;
   }
-  if(n1 === n2 && n1 === n3){
+  if(n1 == n2 && n1 == n3){
     resultado.innerText = 'Los tres números son iguales';
+    return;
   } 
   if(n1 > n2 && n1 > n3){
     resultado.innerText = `El mayor es ${n1}`;

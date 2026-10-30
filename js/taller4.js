@@ -13,7 +13,7 @@ formulario.addEventListener('submit', function (event){
     alert('Escribe por favor un nombre válido');
     return;
   }
-  if(isNaN(edad) || (edad < 18 && edad > 100)) {
+  if(isNaN(edad) || (edad < 18 || edad > 100)) {
     alert('Escribe una edad válida');
     return;
   }
